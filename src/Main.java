@@ -2,7 +2,6 @@ public class Main {
     public static void main(String[] args) {
 
 
-
         byte potato = 100;
         System.out.println(" значение переменной potato с типом byte равно " +potato);
         short eggs = 1000;
@@ -40,10 +39,11 @@ public class Main {
         System.out.print(" на каждого ученика рассчитано " +paperUnit+ " листов бумаги");
 
 
-        byte bottleMaker = 16;
-        short twentyMinutes = 20 / 2 * 16;
+        byte bottleMakerTwoMinutes = 16;
+        int oneMinutes = bottleMakerTwoMinutes / 2 ;
+        int twentyMinutes = oneMinutes * 20;
         System.out.println(" за 20 минут машина произвела " + twentyMinutes+ " бутылок ");
-        short oneDay = 24 * 60 / 2;
+        int oneDay = oneMinutes * 24 * 60;
         System.out.println(" за сутки машина произвела " + oneDay+ " бутылок");
         int threeDays = oneDay * 3;
         System.out.println(" за 3 дня машина произвела " + threeDays+ " бутылок");
@@ -51,10 +51,14 @@ public class Main {
         System.out.println(" за один месяц машина произвела " + oneMonth+ " бутылок");
 
 
-        byte classQuantity = 120 / (2 + 4);
-        int whitePaint = classQuantity * 2;
-        int brownPaint = classQuantity * 4;
-        System.out.println("в школе, где " + classQuantity + " классов, нужно " + whitePaint + " банок белой краски и " + brownPaint + " банок коричневой краски");
+        byte totalPaint = 120;
+        byte whitePaint = 2;
+        byte brownPaint = 4;
+        int oneClassQuantity = whitePaint + brownPaint;
+        int totalClass = totalPaint / oneClassQuantity;
+        int totalWhitePaint = whitePaint * totalClass;
+        int totalBrownPaint = brownPaint * totalClass;
+        System.out.println("в школе, где " + totalClass + " классов, нужно " +totalWhitePaint + " банок белой краски и " + totalBrownPaint + " банок коричневой краски");
 
 
         short bananaPart = 80 * 5;
@@ -70,8 +74,10 @@ public class Main {
 
         short longWay = 7000 / 250;
         short shortWay = 7000 / 500;
+        int averageWay = (longWay + shortWay)/2;
         System.out.println(" при простой диете потребуется на похудение " +longWay+ " дней");
         System.out.println(" при жесткой диете потребуется на похудение " +shortWay+ " дней");
+        System.out.println(" в среднем потребуется " + averageWay+ " день");
 
         int mashaSalary = 67760;
         int denisSalary = 83690;
@@ -87,4 +93,10 @@ public class Main {
         System.out.println(" денис теперь получает " + denisNew+ " рублей. Годовой доход вырос на " + denisYear+ " рублей");
         System.out.println(" кристина теперь получает " + kristinaNew+ " рублей. Годовой доход вырос на " +kristinaYear+ " рублей");
         System.out.println(" общая разница в годовом доходе составляет " + totalYear + " рублей");
-}}
+
+
+
+
+
+
+    }}
